@@ -24,6 +24,22 @@ def multi_rand(start, end, quantity):
     return gen_numbers(quantity, lst)
 
 
-def build_name():
-    name = 'firstname lastname'
+def gen_name():
+    syl_list = syllables()
+    num_list = multi_rand(0, (len(syl_list) - 1), 6)
+    first_name = '{}{}{}'.format(
+            syl_list[num_list[0]],
+            syl_list[num_list[1]],
+            syl_list[num_list[2]])
+    last_name = '{}{}{}'.format(
+            syl_list[num_list[3]],
+            syl_list[num_list[4]],
+            syl_list[num_list[5]])
+    name = '{} {}'.format(last_name.title(), first_name.title())
+
     return name
+
+
+def gen_age():
+    age = 0
+    return age
