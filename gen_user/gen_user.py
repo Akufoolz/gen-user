@@ -13,4 +13,17 @@ def syllables():
 
 
 def multi_rand(start, end, quantity):
-    return True
+    lst = []
+
+    def gen_numbers(count, lst):
+        if count > 0:
+            lst2 = lst + [(randint(start, end))]
+            return gen_numbers(count - 1, lst2)
+        else:
+            return lst
+    return gen_numbers(quantity, lst)
+
+
+def build_name():
+    name = 'firstname lastname'
+    return name
