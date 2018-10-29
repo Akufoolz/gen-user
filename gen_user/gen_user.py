@@ -10,3 +10,7 @@ def syllables():
             'o', 'ko', 'so', 'to', 'no', 'ho', 'mo', 'yo', 'ro', 'wo'
             ]
     return syl_list
+
+
+def multi_rand(start, end, quantity):
+    return True
