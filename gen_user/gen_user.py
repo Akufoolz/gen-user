@@ -69,3 +69,17 @@ def gen_email(name):
     provider = prov_list[num]
     email = '{}.{}@{}'.format(name_list[0], name_list[1], provider)
     return email
+
+
+def gen_new_user():
+    name = gen_name()
+    last_name = name.split()[0]
+    first_name = name.split()[1]
+    age = gen_age()
+    phone = gen_phone()
+    email = gen_email(name)
+    new_user = {
+            'last_name': last_name, 'first_name': first_name,
+            'age': age, 'phone': phone, 'email': email
+            }
+    return new_user
