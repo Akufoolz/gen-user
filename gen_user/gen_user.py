@@ -41,5 +41,14 @@ def gen_name():
 
 
 def gen_age():
-    age = 0
+    age = randint(16, 116)
     return age
+
+
+def gen_phone():
+    num_list = multi_rand(0, 9, 10)
+    if num_list[0] != 0 or num_list[3] != 0:
+        phone = ''.join(map(lambda x: str(x), num_list))
+        return phone
+    else:
+        return gen_phone()
