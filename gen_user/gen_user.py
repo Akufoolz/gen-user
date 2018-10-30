@@ -12,6 +12,14 @@ def syllables():
     return syl_list
 
 
+def email_providers():
+    lst = [
+        'gmail.com', 'outlook.com', 'yahoo.com',
+        'protonmail.com', 'icloud.com'
+        ]
+    return lst
+
+
 def multi_rand(start, end, quantity):
     lst = []
 
@@ -47,8 +55,17 @@ def gen_age():
 
 def gen_phone():
     num_list = multi_rand(0, 9, 10)
-    if num_list[0] != 0 or num_list[3] != 0:
+    if num_list[0] != 0 and num_list[3] != 0 and num_list[0] != 1:
         phone = ''.join(map(lambda x: str(x), num_list))
         return phone
     else:
         return gen_phone()
+
+
+def gen_email(name):
+    name_list = name.lower().split()
+    prov_list = email_providers()
+    num = randint(0, (len(prov_list) - 1))
+    provider = prov_list[num]
+    email = '{}.{}@{}'.format(name_list[0], name_list[1], provider)
+    return email

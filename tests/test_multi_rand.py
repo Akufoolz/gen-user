@@ -9,3 +9,8 @@ def test_list_length_equals_3():
 def test_list_length_equals_32():
     lst = gen_user.multi_rand(0, 9, 32)
     assert len(lst) == 32
+
+
+def test_list_length_equals_1():
+    lst = gen_user.multi_rand(0, 9, 1)
+    assert len(lst) == 1

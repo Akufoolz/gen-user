@@ -1,3 +1,3 @@
-returns string
-must contain @ symbol
-must contain at least one dot(period) after @
+~returns string~
+~must contain onlyt one @ symbol~
+~must contain at least one dot(period) after @~

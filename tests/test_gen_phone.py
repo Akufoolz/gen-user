@@ -18,4 +18,8 @@ def test_return_string_of_10_char(phone):
 
 
 def test_string_position_0_and_3_not_zero(phone):
-    assert phone[0] != '0' or phone[3] != '0'
+    assert phone[0] != '0' and phone[3] != '0'
+
+
+def test_string_position_0_not_one(phone):
+    assert phone[0] != '1'
